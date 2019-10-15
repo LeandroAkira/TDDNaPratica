@@ -9,7 +9,8 @@ public class CalcularNumeroTest {
     @Test
     public void deveSomarCartasABC(){
         String cartasEscolhidas = "ABC";
-        int numeroCalculado = 0;
+        CalcularNumero calcularNumero = new CalcularNumero();
+        int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
 
         assertEquals(7, numeroCalculado);
     }
