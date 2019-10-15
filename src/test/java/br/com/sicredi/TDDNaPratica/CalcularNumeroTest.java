@@ -14,4 +14,13 @@ public class CalcularNumeroTest {
 
         assertEquals(7, numeroCalculado);
     }
+
+    @Test
+    public void deveSomarCartasABCDEF(){
+        String cartasEscolhidas = "ABCDEF";
+        CalcularNumero calcularNumero = new CalcularNumero();
+        int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
+
+        assertEquals(63, numeroCalculado);
+    }
 }
