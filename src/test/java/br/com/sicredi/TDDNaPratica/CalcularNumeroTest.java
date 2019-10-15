@@ -9,10 +9,8 @@ public class CalcularNumeroTest {
     @Test
     public void deveSomarCartasABC(){
         String cartasEscolhidas = "ABC";
-        int numeroEsperado = 7 ;
+        int numeroCalculado = 0;
 
-        int numeroCalculado = soma(cartasEscolhidas);
-
-        assertEquals(numeroEsperado, numeroCalculado);
+        assertEquals(7, numeroCalculado);
     }
 }
