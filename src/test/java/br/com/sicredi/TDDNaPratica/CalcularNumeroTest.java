@@ -2,13 +2,16 @@ package br.com.sicredi.TDDNaPratica;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 public class CalcularNumeroTest {
 
     @Test
     public void deveSomarCartasABC() {
-        String cartasEscolhidas = "ABC";
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("A", "B", "C"));
         CalcularNumero calcularNumero = new CalcularNumero();
         int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
 
@@ -16,17 +19,17 @@ public class CalcularNumeroTest {
     }
 
     @Test
-    public void deveSomarCartasABCDEF() {
-        String cartasEscolhidas = "ABCDEF";
+    public void deveSomarCartasDE() {
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("D", "E"));
         CalcularNumero calcularNumero = new CalcularNumero();
         int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
 
-        assertEquals(63, numeroCalculado);
+        assertEquals(24, numeroCalculado);
     }
 
     @Test
     public void deveSomarCartasA() {
-        String cartasEscolhidas = "A";
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("A"));
         CalcularNumero calcularNumero = new CalcularNumero();
         int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
 
@@ -35,7 +38,7 @@ public class CalcularNumeroTest {
 
     @Test
     public void deveSomarCartasB() {
-        String cartasEscolhidas = "B";
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("B"));
         CalcularNumero calcularNumero = new CalcularNumero();
         int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
 
@@ -44,7 +47,7 @@ public class CalcularNumeroTest {
 
     @Test
     public void deveSomarCartasAB() {
-        String cartasEscolhidas = "AB";
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("A","B"));
         CalcularNumero calcularNumero = new CalcularNumero();
         int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
 
