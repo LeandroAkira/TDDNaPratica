@@ -14,6 +14,15 @@ public class CalcularNumero {
         if(cartas.contains("C")){
             numeroCalculado += 4;
         }
+        if(cartas.contains("D")){
+            numeroCalculado += 8;
+        }
+        if(cartas.contains("E")){
+            numeroCalculado += 16;
+        }
+        if(cartas.contains("F")){
+            numeroCalculado += 32;
+        }
 
         return numeroCalculado;
     }
