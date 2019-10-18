@@ -53,4 +53,22 @@ public class CalcularNumeroTest {
 
         assertEquals(3, numeroCalculado);
     }
+
+    @Test
+    public void deveSomarCartasFG() {
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("F","G"));
+        CalcularNumero calcularNumero = new CalcularNumero();
+        int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
+
+        assertEquals(96, numeroCalculado);
+    }
+
+    @Test
+    public void deveSomarCartasABCDEFG() {
+        List<Cartas> cartasEscolhidas = Cartas.getCartasSelecionadas(Arrays.asList("A","B","C","D","E","F","G"));
+        CalcularNumero calcularNumero = new CalcularNumero();
+        int numeroCalculado = calcularNumero.soma(cartasEscolhidas);
+
+        assertEquals(127, numeroCalculado);
+    }
 }

@@ -6,12 +6,13 @@ import java.util.stream.Stream;
 
 public enum Cartas {
 
-    A("A", 1),
+    A("A",1),
     B("B",2),
     C("C",4),
     D("D",8),
     E("E",16),
-    F("F",32);
+    F("F",32),
+    G("G",64);
 
     private final String carta;
     private final int valor;
